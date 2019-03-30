@@ -11,9 +11,20 @@ class TempConver:
 
   def change(self):
       if self.form=='C':
-          figure1=str(self.figure*1.00+273.15)
+          figureK=str(self.figure*1.00+273.15)
           form1='K'
-          figure2=str(self.figure*9/5+32.00)
+          figureF=str(self.figure*9/5+32.00)
           form2='F'
-          print(form1+"="+figure1)
-          print(form2+"="+figure2)
+          print(form1+"="+figureK)
+          print(form2+"="+figureF)
+      elif self.form=='F':
+          figureC=str((self.figure-32)*5/9)
+          figureC=float(figureC)
+          figureK=str(figureC+273.15)
+          print('C'+"="+figureC)
+          print('K'+"="+figureK)
+      else:
+          figureC=str(self.figure-273.15)
+          figureF=str((figureC-32)*5/9)
+          print('C'+"="+figureC)
+          print('F'+"="+figureF)
